@@ -9,7 +9,7 @@
 <a href="https://github.com/larissa-faria/Portifolio">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/94909143?v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Larissa Faria</b></sub></a> <a href="https://github.com/larissa-faria/Portifolio" title="Portifólio"></a>
+ <sub><b>Larissa Faria</b></sub></a> <a href="https://larissa-faria.github.io/Portifolio/" title="Portifólio"></a>
 
 
 Feito com ❤️ por Larissa Faria👋🏽 Entre em contato!
