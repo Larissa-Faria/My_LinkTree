@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --text-color: white;
+  --bg-url: url(assets/bg-dark.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --hightligh-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(assets/MoonStars.svg);
+}
+.light {
+  --text-color: black;
+  --bg-url: url(assets/bg-Light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --hightligh-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(assets/Sun.svg);
+}
+body {
+  /*Shorthand(Atalho) - background: color image repeat position/size*/
+  background: var(--bg-url) no-repeat top center/cover;
+  /* background-color: rgb(28, 22, 83); */
+}
+body * {
+  font-family: "Special Elite", cursive;
+  color: var(--text-color);
+}
+#container {
+  width: 360px;
+  padding: 0 24px;
+  margin: 56px auto 0px;
+}
+header {
+  /* Alinhamento de textos */
+  text-align: center;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile img {
+  width: 150px;
+  border-radius: 50%;
+}
+.user_profile {
+  color: var(--text-color);
+  text-align: center;
+  font-family: "Special Elite", cursive;
+  line-height: 24px;
+  margin-top: 8px;
+  font-size: 1.1em;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.type_animation {
+  animation: cursor 500ms infinite normal, typing 4s steps(40) 1s normal both;
+}
+@keyframes cursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 15em;
+  }
+}
+.switch {
+  /* Posição relativa no pai */
+  position: relative;
+  width: 64px;
+
+  /* Alinhamento de um elemento block: colocar uma largura fixa e automatizar as margens laterais */
+  margin: 4px auto;
+}
+.switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50px;
+
+  /* Posição absoluta no filho */
+  position: absolute;
+  z-index: 1;
+  left: 0;
+
+  /* Alinhar horizontalmente top e translateY- Verticalmente right e translateX*/
+  top: 50%;
+  transform: translateY(-50%);
+}
+.light .switch button {
+  right: 0;
+  left: initial;
+}
+.switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+/*lista de links*/
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+ul li a {
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  /* Alinhamento com o display flex */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1px solid var(--text-color);
+  transition: background 0.5s;
+}
+.social_links {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social_links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+.social_links a:hover {
+  background: var(--hightligh-color);
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin: 22px 0;
+}
